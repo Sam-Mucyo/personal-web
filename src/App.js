@@ -168,29 +168,30 @@ const getTheme = (mode) => {
 };
 
 function App() {
-    const [mode, setMode] = useState('light');
+    // Initialize with localStorage value or light mode as default
+    const [mode, setMode] = useState(() => {
+        try {
+            const savedMode = localStorage.getItem('themeMode');
+            return savedMode ? savedMode : 'light';
+        } catch (error) {
+            console.error('Error accessing localStorage:', error);
+            return 'light';
+        }
+    });
+    
     const theme = React.useMemo(() => getTheme(mode), [mode]);
 
     const toggleColorMode = () => {
-        setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
-    };
-
-    // Check for saved theme preference or use light mode as default
-    useEffect(() => {
-        const savedMode = localStorage.getItem('themeMode');
-        if (savedMode) {
-            // Use saved preference if it exists
-            setMode(savedMode);
-        } else {
-            // For first-time users, default to light mode
-            setMode('light');
+        const newMode = mode === 'light' ? 'dark' : 'light';
+        setMode(newMode);
+        
+        // Save to localStorage immediately when toggled
+        try {
+            localStorage.setItem('themeMode', newMode);
+        } catch (error) {
+            console.error('Error saving to localStorage:', error);
         }
-    }, []);
-
-    // Save theme preference when it changes
-    useEffect(() => {
-        localStorage.setItem('themeMode', mode);
-    }, [mode]);
+    };
 
     return (
         <ThemeProvider theme={theme}>
