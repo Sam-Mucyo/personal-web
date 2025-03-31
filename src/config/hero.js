@@ -12,8 +12,8 @@ export const heroConfig = {
         whatsapp: '+1234567890'
     },
     name: 'Sam Mucyo',
-    title: 'Software Engineer & HPC Enthusiast',
-    roles: ['Developer', 'HPC Enthusiast', 'CS50 Teaching Fellow'],
+    title: "Harvard '25",
+    roles: [],
     description: "Harvard Computer Science senior who tackles complex problems and delivers results. Proven ability to adapt and contribute at Amazon, while strengthening leadership as a teaching fellow for CS50 and CS2050. Excited to bring this proactive, adaptable approach to any team seeking innovative problem solvers.",
     heroImage: require('../img/hero.png'),
     courseLinks: courseLinks,

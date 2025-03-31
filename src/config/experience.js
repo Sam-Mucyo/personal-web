@@ -1,6 +1,6 @@
 export const experienceConfig = {
     title: 'Experience',
-    description: 'My professional journey across various roles in software engineering, teaching, and research.',
+    description: '',
     experiences: [
         {
             title: 'Teaching Fellow',
@@ -10,9 +10,8 @@ export const experienceConfig = {
             location: 'Cambridge, MA',
             period: 'January 2025 - Present',
             url: 'https://www.harvard.edu',
-            summary: 'Teaching parallel programming concepts and high-performance computing techniques to graduate students.',
+            summary: 'Assist in teaching parallel programming concepts and high-performance computing techniques.',
             description: [
-                'Assist in teaching parallel programming concepts including OpenMP, MPI, and CUDA',
                 'Guide students in using HPC tools like CMake, Slurm, and profiling tools on compute clusters',
                 'Support implementation of parallel algorithms for shared and distributed memory systems',
                 'Provide detailed feedback on assignments and projects to improve student understanding'
@@ -49,9 +48,8 @@ export const experienceConfig = {
                 'Architected APIs for a rule-based risk monitoring and alarming system',
                 'Developed a Python-based backend with AWS CDK for rapid deployments',
                 'Leveraged AWS Lambda and DynamoDB for scalable solutions',
-                'Implemented real-time notification system using SNS and CloudWatch'
             ],
-            skills: ['Python', 'AWS CDK', 'Lambda', 'DynamoDB', 'API Gateway', 'CloudWatch', 'SNS']
+            skills: ['Python', 'AWS CDK', 'Lambda', 'DynamoDB', 'API Gateway']
         },
         {
             title: 'Teaching Fellow',
