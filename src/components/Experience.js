@@ -146,17 +146,17 @@ function Experience() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.1 }}
                         >
-                            <Typography 
-                                variant="subtitle1" 
+                            {/* <Typography
+                                variant="subtitle1"
                                 color="text.secondary"
-                                sx={{ 
+                                sx={{
                                     maxWidth: 600,
                                     mx: { xs: 'auto', md: 0 },
                                     mt: 2,
                                 }}
                             >
                                 {experienceConfig.description || "My professional journey and work experience across different roles and organizations."}
-                            </Typography>
+                            </Typography> */}
                         </motion.div>
                     </Box>
 
