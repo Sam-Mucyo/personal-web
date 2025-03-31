@@ -301,31 +301,32 @@ function Hero() {
                                     sx={{
                                         position: 'relative',
                                         width: '100%',
-                                        height: '400px',
+                                        height: '450px',
+                                        display: 'flex',
+                                        justifyContent: 'center',
+                                        alignItems: 'center',
                                         borderRadius: '20px',
                                         overflow: 'hidden',
-                                        boxShadow: 3,
-                                        '&::before': {
-                                            content: '""',
-                                            position: 'absolute',
-                                            top: 0,
-                                            left: 0,
-                                            width: '100%',
-                                            height: '100%',
-                                            background: 'linear-gradient(135deg, rgba(67, 97, 238, 0.3) 0%, rgba(58, 12, 163, 0.3) 100%)',
-                                            zIndex: 1,
-                                        },
+                                        background: theme.palette.mode === 'dark' 
+                                            ? 'radial-gradient(circle, rgba(66,66,74,0.5) 0%, rgba(25,25,25,0.5) 100%)'
+                                            : 'radial-gradient(circle, rgba(238,242,255,0.5) 0%, rgba(215,222,254,0.5) 100%)',
                                     }}
                                 >
-                                    {/* Replace with your actual hero image */}
+                                    {/* Subject picture with no background */}
                                     <Box
                                         component="img"
                                         src={heroConfig.heroImage || 'https://source.unsplash.com/random/600x800?developer'}
                                         alt="Hero"
                                         sx={{
-                                            width: '100%',
-                                            height: '100%',
-                                            objectFit: 'cover',
+                                            width: '90%',
+                                            height: '90%',
+                                            objectFit: 'contain',
+                                            filter: 'drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.15))',
+                                            transform: 'scale(1.05)',
+                                            transition: 'transform 0.3s ease-in-out',
+                                            '&:hover': {
+                                                transform: 'scale(1.08)',
+                                            },
                                         }}
                                     />
                                 </Box>
