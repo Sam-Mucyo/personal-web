@@ -1,4 +1,4 @@
 export const navbarConfig = {
-  logo: 'SM',
+  logoImage: '/img/logo.png',
   navItems: ['Home', 'Experience', 'Projects', 'Skills', 'Contact']
 };
